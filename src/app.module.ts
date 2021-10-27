@@ -4,6 +4,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { UserModule } from './app/user/user.module';
 import { join } from 'path';
 import { PostsModule } from './app/posts/posts.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { PostsModule } from './app/posts/posts.module';
     }),
     UserModule,
     PostsModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],
