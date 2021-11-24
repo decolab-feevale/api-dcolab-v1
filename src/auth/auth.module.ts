@@ -7,8 +7,14 @@ import { JwtModule } from '@nestjs/jwt';
 
 @Module({
   providers: [AuthService],
-  imports: [ConfigModule.forRoot(),UserModule, PassportModule, JwtModule.register({
-
-  })]
+  imports: [
+    ConfigModule.forRoot(),
+    UserModule, 
+    PassportModule, 
+    JwtModule.register({
+      privateKey:'',
+      
+    })
+  ],
 })
 export class AuthModule {}
